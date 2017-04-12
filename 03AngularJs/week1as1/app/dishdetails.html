@@ -45,8 +45,8 @@
 
             <div class="col-xs-9 col-xs-offset-1">
                 <h4>Customer Comments <small>Sort by<input type="text" ng-model="sortComments"></small></h4>
-                <ul class="list-unstyled" ng-repeat="comment in dishCtrl.dish.comments | orderBy: sortComments">
-                    <li>
+                <ul class="list-unstyled" >
+                    <li ng-repeat="comment in dishCtrl.dish.comments | orderBy: sortComments">
                         <blockquote>
                             <h4>{{comment.rating}} Stars</h4>
                             <h4>{{comment.comment}}</h4>
